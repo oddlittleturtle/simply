@@ -15,7 +15,7 @@
             </div>
 
             {{!-- Tag Cloud --}}
-            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
+           {{!-- <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
                 <div class="footer-items footer-tags flex-grow px-4">
                     <h3 class="footer-items-title mb-6 text-22">{{t "Tags"}}</h3>
                     {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
@@ -28,7 +28,26 @@
                     </div>
                     {{/foreach}}{{/get}}
                 </div>
+            </div> --}}
+            
+            {{!-- Odd's Mods --}}
+            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
+                <div class="footer-items footer-tags flex-grow px-4">
+                    <h3 class="footer-items-title mb-6 text-22">{{t "Odds Mods"}}</h3>
+                    <div class="footer-b flex-grow mb-4">
+                        <p class="mb-4 text-base">Little Quality of Life Mods that Make Sense</p>
+                        {{!-- FO4 Xbox button --}}
+                        
+                        {{!-- FO4 PS4 button --}}
+                        
+                        {{!-- Skyrim Xbox button --}}
+                        
+                        {{!-- Skyrim PS4 button --}}
+                        
+                    </div>
+                </div>
             </div>
+            
 
             {{!-- members subscribe --}}
             <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
@@ -74,7 +93,7 @@
                 &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
                 <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
                 by
-                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a> | Powered by <a href="https://ghost.org" title="Ghost">Ghost</a>
             </div>
 
             {{!-- Footer Menu --}}
@@ -85,7 +104,7 @@
             &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
             <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
             by
-            <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+            <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a> | Powered by <a href="https://ghost.org" title="Ghost">Ghost</a> 
         </div>
         {{/if}}
 
