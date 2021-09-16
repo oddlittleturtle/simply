@@ -154,6 +154,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [PT Serif Font Family](https://fonts.google.com/specimen/PT+Serif)
 - [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
 - [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)
+- [Indus](https://https://www.free-css.com/free-css-templates/page266/indus)
 
 ## Copyright & License
 
