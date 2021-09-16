@@ -1,5 +1,6 @@
 //Create URL via Short.io
 //https://developers.short.io/reference#linkspost
+//Doing it this way because Zapier imposes their own branding on short links when integrating to Twitter.
 
 const options = {
   method: 'POST',
@@ -26,3 +27,5 @@ fetch('https://api.short.io/links/qr/linkIdString', options)
   .catch(err => console.error(err));
 
 //Todo: documentation for adding to Ghost webhook integrations and extra script to ghost footer
+//Todo: code for adding shortlink to header of each post
+//Todo: Twitter API integrations
