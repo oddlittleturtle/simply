@@ -34,7 +34,7 @@
                     </div>
 
                     <a href="{{url}}">
-                        <img class="author-card-avatar u-image rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+                        <img class="author-card-avatar u-image rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "{{name}}"}} {{name}}" />
                     </a>
                 </footer>
             </article>
