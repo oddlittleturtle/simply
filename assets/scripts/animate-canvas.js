@@ -17,10 +17,10 @@
         height = window.innerHeight;
         target = {x: 0, y: height};
 
-        largeHeader = document.getElementById('new-hero-header');
+        largeHeader = document.getElementById('personal-cover');
         largeHeader.style.height = height+'px';
 
-        canvas = document.getElementById('hero-canvas');
+        canvas = document.getElementById('simply-hero-canvas');
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
