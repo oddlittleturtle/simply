@@ -57,6 +57,7 @@
                 </p>
                 {{/if}}--}}
 				
+				
             </section>
 			
 
@@ -75,10 +76,14 @@
                 </div>
             </div>
 			
-			<hr class="my-10">
+			
+			<section class="post-body font-sans has-sidebar text-base leading-relaxed js-kusi-doc">
+				<hr class="my-10">
+					
+				{{!-- User Engagement - partials/components/user-engagement.hbs --}}
+				{{> "components/user-engagement"}}
 				
-			{{!-- User Engagement --}}
-			{{> "components/user-engagement" class="flex"}}
+			</section>
 			
         </div>
     </article>

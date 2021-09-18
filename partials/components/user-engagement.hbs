@@ -4,37 +4,44 @@
 	class="button is-primary is-outlined is-medium uppercase">
     <i class="fab fa-discord"></i> <span>Join Us!</span></a> 
 	{{#if twitter}}
-	<a href="{{@site.twitter}}" 
-	target="_blank" 
-	class="button is-primary is-outlined is-medium uppercase">
-	<i class="fab fa-twitter"></i> <span>Follow us!</span>
-	</a>
+		<a href="{{@site.twitter}}" 
+			target="_blank" 
+			class="button is-primary is-outlined is-medium uppercase">
+			<i class="fab fa-twitter"></i> <span>Follow us!</span>
+		</a>
 	{{/if}}
 
 <h4 class="text-base font-semi-bold uppercase">ODD'S MODS</h4>
 <a class="button is-primary is-outlined is-medium uppercase" 
 	href="https://oddsmods.xyz/FO4"
-	target="_blank"><i class="fab fa-xbox"></i> <span>Fallout 4</span>
+	target="_blank">
+	<i class="fab fa-xbox"></i> <span>Fallout 4</span>
 </a> 
 <a class="button is-primary is-outlined is-medium uppercase" 
 	href="https://oddsmods.xyz/FO4PS4"
-	target="_blank"><i class="fab fa-playstation"></i> <span>Fallout 4</span> 
+	target="_blank">
+	<i class="fab fa-playstation"></i> <span>Fallout 4</span> 
 </a>
 <a class="button is-primary is-outlined is-medium uppercase" 
 	href="https://oddsmods.xyz/SSE" 
-	target="_blank"> <i class="fab fa-xbox"></i> <span>Skyrim SSE</span>
+	target="_blank">
+	<i class="fab fa-xbox"></i> <span>Skyrim SSE</span>
 	</a> 
 
 
 <h4 class="text-base font-semi-bold uppercase">SUPPORT US</h4>
-Donations welcome. If you sign up on Patreon, you get a complementary membership to the newsletter here for as long as you are a patron.<br><br>
+<p class="text-base">Donations welcome. If you sign up on Patreon, you get a complementary membership to the newsletter here for as long as you are a patron.</p>
 <a href="https://www.paypal.com/donate?token=GwMrjBnB1dtW6UTnmbkwChkWxcgevlPXa2MjCObz3Nr2tR2rNh96RtznFq81dkLY_4pNS0FpcJomakWw" 
 	target="_blank" 
 	class="button is-primary is-outlined is-medium uppercase">
-    <i class="fab fa-cc-paypal"></i> DONATE</a> 
+    <i class="fab fa-cc-paypal"></i> <span>Donate</span>
+	</a> 
 	<a href="https://patreon.com/oddlittleturtle" 
 	target="_blank" 
-	class="button is-primary is-outlined is-medium uppercase"><i class="fab fa-patreon"></i> SUPPORT</a>
-</p>
+	class="button is-primary is-outlined is-medium uppercase">
+	<i class="fab fa-patreon"></i> <span>Support</span>
+	</a>
+{{!-- Post Commets - partials/article/article-comments.hbs --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}
 
 
