@@ -1,46 +1,67 @@
-<h4 class="text-base font-semi-bold uppercase">JOIN THE DISCUSSION</h4>
-<a href="{{@site.url}}/discord/" 
-	target="_blank" 
-	class="button is-primary is-outlined is-medium uppercase">
-    <i class="fab fa-discord"></i> <span>Join Us!</span></a> 
-	{{#if twitter}}
-		<a href="{{@site.twitter}}" 
-			target="_blank" 
-			class="button is-primary is-outlined is-medium uppercase">
-			<i class="fab fa-twitter"></i> <span>Follow us!</span>
+<div class="pae row text-center">
+	<div class="col mb-8">
+		<div class="">
+		<svg class="icon icon-turtle"><use xlink:href="#icon-turtle"></use></svg>
+		</div>
+		<h4 class="pae-title uppercase">ODD'S MODS</h4>
+			<a class="button is-primary is-outlined is-medium uppercase" 
+				href="https://oddsmods.xyz/FO4"
+				target="_blank">
+				<i class="fab fa-xbox"></i> <span>Fallout 4</span>
+			</a> 
+			<a class="button is-primary is-outlined is-medium uppercase" 
+				href="https://oddsmods.xyz/FO4PS4"
+				target="_blank">
+				<i class="fab fa-playstation"></i> <span>Fallout 4</span> 
+			</a>
+			<a class="button is-primary is-outlined is-medium uppercase" 
+				href="https://oddsmods.xyz/SSE" 
+				target="_blank">
+				<i class="fab fa-xbox"></i> <span>Skyrim SSE</span>
+				</a>
+		</div>
+	 
+	</div>
+	<div><svg class="icon icon-gift"><use xlink:href="#icon-gift"></use></svg></div>
+	<h4 class="pae-title uppercase">SUPPORT US</h4>
+	<p class="text-base">Donations welcome. </p>
+	<a href="https://www.paypal.com/donate?token=GwMrjBnB1dtW6UTnmbkwChkWxcgevlPXa2MjCObz3Nr2tR2rNh96RtznFq81dkLY_4pNS0FpcJomakWw" 
+		target="_blank" 
+		class="button is-primary is-outlined is-medium uppercase">
+		<i class="fab fa-cc-paypal"></i> <span>Donate</span>
+		</a> 
+		<a href="https://patreon.com/oddlittleturtle" 
+		target="_blank" 
+		class="button is-primary is-outlined is-medium uppercase">
+		<i class="fab fa-patreon"></i> <span>Support</span>
 		</a>
-	{{/if}}
+</div>
+<div>
+	<div><svg class="icon icon-merchandise"><use xlink:href="#icon-merchandise"></use></svg></div>
+	<h4 class="pae-title uppercase">Buy Merch</h4>
+	<p class="text-base">Support our site and tell people how you really feel.</p>
+	<a href="https://www.redbubble.com/people/oddlittleturtle/shop?asc=u" 
+		target="_blank" 
+		class="button is-primary is-outlined is-medium uppercase">
+		<i class="fas fa-coffee"></i> <span>Merch</span>
+		</a>
+</div>
 
-<h4 class="text-base font-semi-bold uppercase">ODD'S MODS</h4>
-<a class="button is-primary is-outlined is-medium uppercase" 
-	href="https://oddsmods.xyz/FO4"
-	target="_blank">
-	<i class="fab fa-xbox"></i> <span>Fallout 4</span>
-</a> 
-<a class="button is-primary is-outlined is-medium uppercase" 
-	href="https://oddsmods.xyz/FO4PS4"
-	target="_blank">
-	<i class="fab fa-playstation"></i> <span>Fallout 4</span> 
-</a>
-<a class="button is-primary is-outlined is-medium uppercase" 
-	href="https://oddsmods.xyz/SSE" 
-	target="_blank">
-	<i class="fab fa-xbox"></i> <span>Skyrim SSE</span>
-	</a> 
+	<div><svg class="icon icon-glass"><use xlink:href="#icon-glass"></use></svg></div>
+	<h4 class="pae-title uppercase">JOIN THE DISCUSSION</h4>
+	<p>Ask questions, get help, learn load orders, report bugs, make suggestions.</p>
+	<a href="{{@site.url}}/discord/" 
+		target="_blank" 
+		class="button is-primary is-outlined is-medium uppercase">
+		<i class="fab fa-discord"></i> <span>Join Us!</span></a> 
+		{{#if twitter}}
+			<a href="{{@site.twitter}}" 
+				target="_blank" 
+				class="button is-primary is-outlined is-medium uppercase">
+				<i class="fab fa-twitter"></i> <span>Follow us!</span>
+			</a>
+		{{/if}}
 
-
-<h4 class="text-base font-semi-bold uppercase">SUPPORT US</h4>
-<p class="text-base">Donations welcome. If you sign up on Patreon, you get a complementary membership to the newsletter here for as long as you are a patron.</p>
-<a href="https://www.paypal.com/donate?token=GwMrjBnB1dtW6UTnmbkwChkWxcgevlPXa2MjCObz3Nr2tR2rNh96RtznFq81dkLY_4pNS0FpcJomakWw" 
-	target="_blank" 
-	class="button is-primary is-outlined is-medium uppercase">
-    <i class="fab fa-cc-paypal"></i> <span>Donate</span>
-	</a> 
-	<a href="https://patreon.com/oddlittleturtle" 
-	target="_blank" 
-	class="button is-primary is-outlined is-medium uppercase">
-	<i class="fab fa-patreon"></i> <span>Support</span>
-	</a>
 {{!-- Post Commets - partials/article/article-comments.hbs --}}
 {{#post}}{{> "article/article-comments"}}{{/post}}
 

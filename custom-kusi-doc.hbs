@@ -11,7 +11,9 @@
     <div class="sidebar flex-none border-r border-gray-300 order-2 md:w-64 lg:order-none" style="border-color: var(--border-color)">
         <div class="sticky top-16 pr-5">
             <nav class="py-12 overflow-y-auto lg:max-h-(screen-16) scroll-transparent">
-                <div class="uppercase font-medium text-sm text-gray-600 mb-3 px-2">{{t "{{primary_tag}} Documentation"}}</div>
+                <div class="uppercase font-medium text-sm text-gray-600 mb-3 px-2">
+				{{t "Customize Your Game"}}
+				</div>
 
                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu" class="leading-tight text-base">
                     {{#get "posts" filter="tags:{{tags.[0].slug}}" limit="all" order="published_at asc"}}
@@ -42,20 +44,7 @@
             <section class="post-body font-sans has-sidebar text-base leading-relaxed js-kusi-doc">
                 {{content}}
 
-                {{!-- Button to edit on GitHub - add link on Facebook description --}}
-                {{!--{{#if og_description}}
-                <p class="mt-10">
-                    <a class="edit-on-github godo-tracking button is-outlined is-primary"
-                        href="{{og_description}}"
-                        data-event-category="Kusi Doc"
-                        data-event-action="{{tags.[0].name}}"
-                        data-event-label="{{title}}"
-                        data-event-non-interaction="true">
-                        <svg class="icon mr-2"><use xlink:href="#icon-github"></use></svg>
-                        <span>Edit this page on GitHub</span>
-                    </a>
-                </p>
-                {{/if}}--}}
+                
 				
 				
             </section>
