@@ -52,8 +52,12 @@
             {{!-- members subscribe --}}
             <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
                 <div class="footer-items flex-grow">
+				{{#if @member}}
+				<h3 class="footer-items-title mb-6 text-22">{{t "Thank you for subscribing!"}}</h3>
+                    <p class="mb-4">{{t "Your support means a lot! Stay tuned for more updates."}}</p>
+				{{else}}
                     <h3 class="footer-items-title mb-6 text-22">{{t "Subscribe"}}</h3>
-                    <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
+                    <p class="mb-4">{{t "Follow the journal for the latest updates straight into your inbox!"}}</p>
 
                     {{!-- Form subscribe --}}
                     <form class="max-w-sm simply-form" data-members-form="subscribe">
@@ -74,7 +78,7 @@
 
                         {{!-- success --}}
                         <div class="message-success mx-auto max-w-xl w-full bg-success text-white p-2 rounded-md mt-4 hidden text-sm">
-                            {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
+                            {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription. We're new so check your spam folder. Please mark any messages from us as NOT SPAM."}}}
                         </div>
 
                         {{!-- error --}}
@@ -82,6 +86,9 @@
                             {{t "Please enter a valid email address!"}}
                         </div>
                     </form>
+				{{/if}}
+					
+					
                 </div>
             </div>
         </div>

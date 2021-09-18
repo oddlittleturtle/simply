@@ -11,6 +11,31 @@
             {{#if custom_excerpt}}<p class="text-3xl text-title font-semibold">{{custom_excerpt}}</p>{{/if}}
         </header>
 
+<form name="oddlittleturtle.com contact form" accept-charset="utf-8" class="max-w-740 mx-auto mb-16" action="https://formspree.io/f/xpzklvwb" method="post">
+  <div class="row">
+        <div class="col s12 m6 mb-8">
+            <input name="name" type="text" placeholder="gamer tag/bethesda.net login/name" required>
+        </div>
+        <div class="col s12 m6 mb-8">
+            <input name="email" type="email" placeholder="you@yourmail.com" required>
+        </div>
+		<div class="col s12 mb-8">
+		<label for="subject">Subject</label>
+					<select name="_subject" id="email-subject" required="">
+					  <option value="Select" selected="" disabled="">Select</option>
+					  <option value="Share Modding Story">Share Modding Story and Say Hello</option>
+					  <option value="Website Questions">Website Questions</option>
+					  <option value="Load Order Questions">Load Order Questions</option>
+					  <option value="Mod Request">Mod Request</option>
+					  <option value="Bug Report">Bug Report</option>
+					  <option value="Other">Other</option>
+					</select>
+		</div>
+        <div class="col s12 mb-8"><textarea name="message" placeholder="Talk to me. :)" required></textarea></div>
+        <div class="col s12 text-center mb-10"><button type="submit" class="button is-primary">Send Message</button></div>
+    </div>
+</form>
+
         {{!-- Content --}}
         {{content}}
     {{/post}}

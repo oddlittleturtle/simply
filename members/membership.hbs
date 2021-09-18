@@ -11,8 +11,9 @@
 
 <header class="checkout-header">
     <div class="px-4 py-vw6 mx-auto max-w-3xl text-center">
-        <h1 class="text-5xl text-title lg:text-5xl">Simply plans for everyone</h1>
-        <div class="mt-8 text-xl text-gray-500">Start for free, buy it when you 💚 it</div>
+        <h1 class="text-5xl text-title lg:text-5xl">Join the community!</h1>
+        <div class="mt-8 text-xl text-gray-500"><p>All load order information and mod documentation is available to the public for free, but only members can comment. This keeps spam down so we don't have to include more third party services than we have to.</p> 
+		<p>Join the community and take part in discussions.</p></div>
     </div>
 </header>
 
@@ -22,11 +23,11 @@
         {{#unless @member}}
         <div class="plan-box py-8 pl-10 pr-5 max-w-sm w-full">
             <header class="plan-box-header">
-                <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Starter</h3>
-                <p class="text-gray-500">For people just starting</p>
+                <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Follow the journal and comment on posts</h3>
+                <p class="text-gray-500">Casual readers</p>
                 <div class="text-44 font-bold my-8 leading-none">Free</div>
 
-                <a class="button is-primary is-outlined is-medium" href="{{@site.url}}/signup/">Get Started</a>
+                <a class="button is-primary is-outlined is-medium" href="{{@site.url}}/signup/">Become a member today</a>
             </header>
             <div class="plan-box-body mt-8 leading-tight">
                 <ul>
@@ -34,6 +35,14 @@
                     <li class="flex self-start">
                         <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
                         <span>Load Orders | Mods | Mod Development</span>
+                    </li>
+					<li class="flex self-start">
+                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
+                        <span>Access to comments on posts</span>
+                    </li>
+                    <li class="flex self-start">
+                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
+                        <span>Regular updates with new content</span>
                     </li>
                 </ul>
             </div>
@@ -55,9 +64,9 @@
             <div class="plan-box-body mt-8 leading-tight">
                 <ul>
                     {{!-- Adding lists for the yearly plan --}}
-                    <li class="flex self-start">
+					<li class="flex self-start">
                         <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span> access to all private posts</span>
+                        <span>Access to any private posts</span>
                     </li>
                     <li class="flex self-start">
                         <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
@@ -83,7 +92,7 @@
         <div class="plan-box py-8 pl-10 pr-5 max-w-sm w-full">
             <header class="plan-box-header">
                 <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Monthly</h3>
-                <p class="text-gray-500">Get access to everything and lock in early adopter pricing for life</p>
+                <p class="text-gray-500">Support the site</p>
                 <div class="text-44 font-bold my-8 leading-none">
                     <span>{{price currency=@price.currency}} {{@price.monthly}}</span>
                     <span class="text-lg text-gray-500 font-medium">/ month</span>
@@ -96,7 +105,7 @@
                     {{!-- Adding lists for the Monthly plan --}}
                     <li class="flex self-start">
                         <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span><strong>Full access to</strong> all private posts</span>
+                        <span>Access to any private posts</span>
                     </li>
                     <li class="flex self-start">
                         <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
@@ -118,7 +127,8 @@
 
     {{!-- Optional Note --}}
     <div class="mt-20 mx-auto max-w-xl px-4 text-center">
-        <p><strong>Please note:</strong> All comments on our articles and game mod documentation are subject to our Acceptable Use Policy.</p>
+        <p>Not for you? You can also show your support on Patreon. Patreon pledges are automatically signed up for a complementary plan here.</p>
+		<p>All comments on our articles and game mod documentation are subject to our Acceptable Use Policy.</p>
     </div>
 
 </section>

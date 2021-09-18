@@ -2,7 +2,11 @@
     <div class="mx-auto px-4 max-w-1000">
         <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
             {{!-- Disqus Comments --}}
-            <div id="disqus_thread"></div>
+			{{#if @member}}
+				<div id="disqus_thread"></div>
+			{{else}}
+				<p>Only members can post comments.</p>
+			{{/if}}
         </div>
     </div>
 </div>
