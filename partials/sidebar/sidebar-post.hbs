@@ -2,8 +2,10 @@
     <div class="flex flex-col flex-1">
 
         {{#get "posts" limit="3" filter="tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]+id:-{{comment_id}}" as |sidebar_latest_post| }}
-            {{> "sidebar/sidebar-post-card" widgetTitle=(t "Latest Posts") widgetPosts=sidebar_latest_post }}
+            {{> "sidebar/sidebar-post-card" widgetTitle=(t "Latest Articles") widgetPosts=sidebar_latest_post }}
         {{/get}}
+		
+		{{> "sidebar/twitter-widget-sidebar" widgetTitle=(t "Latest Tweets")}}
 
     </div>
 </aside>

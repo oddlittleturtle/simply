@@ -56,23 +56,27 @@
 	<div class="col mb-8">
 		<div class="pae-icon"><svg class="icon icon-gift"><use xlink:href="#icon-gift"></use></svg></div>
 		<h4 class="pae-title uppercase">SUPPORT US</h4>
-		<p class="pae-des">Donations welcome.<br>Help us keep our site ad-free.</p>
+		{{#unless @member.paid}}
+		<p class="pae-des">Donations welcome.</p><p>Help us keep our site ad-free by signing up for paid memberships.</p>
 		<a href="https://patreon.com/oddlittleturtle" 
 			target="_blank"
 			rel="noopener noreferrer"
 			data-event-label="Patreon"
 			class="button is-light font-medium text-sm capitalize godo-tracking">
-			<i class="fab fa-patreon"></i> <span>Support</span>
+			<i class="fab fa-patreon"></i> <span>Subscribe</span>
 		</a>
-		{{#unless @member.paid}}
-			<a href="{{@site.url}}/account/plans/" 
+		<a href="{{@site.url}}/account/plans/" 
 				target="_blank"
 				rel="noopener noreferrer"
 				data-event-label="Tip Jar"
 				class="button is-light font-medium text-sm capitalize godo-tracking">
-				<i class="fas fa-hand-holding-heart"></i> <span>Support</span>
-			</a>
+				<i class="fas fa-envelope-open-text"></i> <span>Subscribe</span>
+		</a>
+		<p>Patreon signups receive complementary membership here.</p>
+		{{else}}
+		<p class="pae-des">Your support means a lot. Thanks so much!</p>
 		{{/unless}}
+
 	</div>
 
 {{!-- Moichandizing, moichandizing, moichandizing. Oddlittleturtle the Tee-shirt! --}}
@@ -90,6 +94,7 @@
 	</div>
 
 </div>
+
 {{!-- Post Commets - partials/article/article-comments.hbs --}}
 {{#post}}{{> "article/article-comments"}}{{/post}}
 
