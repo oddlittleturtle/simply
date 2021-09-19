@@ -2,10 +2,11 @@
     <div class="mx-auto px-4 max-w-1000">
         <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
             {{!-- Disqus Comments --}}
-			{{#if @member}}
+			{{#if access}}
 				<div id="disqus_thread"></div>
 			{{else}}
-				<p>Only members can post comments.</p>
+				<p>Only site subscribers can view and post comments. <a href="{{@site.url}}/signup/">Sign up</a> for a free membership today.</p>
+				<p>Already have an account? <a href="{{@site.url}}/signin/">Sign in</a></p>
 			{{/if}}
         </div>
     </div>

@@ -86,7 +86,7 @@
         {{!-- sidebar --}}
         <aside class="sidebar col s12 l4 flex flex-col flex-1 justify-start mt-12 lg:mt-0">
             <div class="lg:sticky lg:top-28">
-                <h3 class="uppercase text-sm mb-4">{{t "Discover more of what matters to you"}}</h3>
+                <h3 class="uppercase text-sm mb-4">{{t "Discover more"}}</h3>
                 <div class="buttons">
                     {{#get "tags" limit="10" filter="visibility:public" order="count.posts desc"}}{{#foreach tags}}
                         <a href="{{url absolute="true"}}" title="{{name}}" class="button is-light font-medium text-sm capitalize">{{name}}</a>
