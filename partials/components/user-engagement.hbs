@@ -5,24 +5,36 @@
 		<svg class="icon icon-turtle"><use xlink:href="#icon-turtle"></use></svg>
 		</div>
 		<h4 class="pae-title uppercase">ODD'S MODS</h4>
-		<div class="pae-des">Quality of life mods that make sense.</div>
+		<div class="pae-des"><p>Quality of life mods that make sense.</p></div>
+		<p>
 			<a class="button is-light font-medium text-sm capitalize godo-tracking" 
 				href="https://oddsmods.xyz/FO4"
 				target="_blank"
-				rel="noopener noreferrer">
+				rel="noopener noreferrer"
+				data-event-label="Fallout 4 Xbox">
 				<i class="fab fa-xbox"></i> <span>Fallout 4</span>
 			</a> 
 			<a class="button is-light font-medium text-sm capitalize godo-tracking" 
 				href="https://oddsmods.xyz/FO4PS4"
 				target="_blank"
+				data-event-label="Fallout 4 PlayStation"
 				rel="noopener noreferrer">
 				<i class="fab fa-playstation"></i> <span>Fallout 4</span> 
 			</a>
 			<a class="button is-light font-medium text-sm capitalize godo-tracking" 
 				href="https://oddsmods.xyz/SSE" 
+				data-event-label="Skyrim Xbox"
 				target="_blank"
 				rel="noopener noreferrer">
 				<i class="fab fa-xbox"></i> <span>Skyrim SSE</span>
+			</a>
+			</p>
+			<a class="button is-light font-medium text-sm capitalize godo-tracking" 
+				href="{{@site.url}}/mods/" 
+				data-event-label="Skyrim Xbox"
+				target="_blank"
+				rel="noopener noreferrer">
+				<i class="fab fa-xbox"></i> <span>Documentation</span>
 			</a>
 	</div>
 {{!-- discussion --}}
@@ -32,6 +44,7 @@
 	<h4 class="pae-title uppercase">JOIN THE DISCUSSION</h4>
 	<div class="pae-des"><p>Ask questions, get help, learn load orders, report bugs, make suggestions, share screenshots and playthrough stories.</p>
 	</div>
+	<p>
 	<a href="{{@site.url}}/discord/" 
 		target="_blank"
         rel="noopener noreferrer"
@@ -48,6 +61,7 @@
 				<i class="fab fa-twitter"></i> <span>Follow us!</span>
 			</a>
 		{{/if}}
+		</p>
 </div>
 	
 </div>
@@ -57,7 +71,9 @@
 		<div class="pae-icon"><svg class="icon icon-gift"><use xlink:href="#icon-gift"></use></svg></div>
 		<h4 class="pae-title uppercase">SUPPORT US</h4>
 		{{#unless @member.paid}}
-		<p class="pae-des">Donations welcome.</p><p>Help us keep our site ad-free by signing up for paid memberships.</p>
+		<div class="pae-des">
+		<p>Donations welcome.</p>
+		<p>Help us keep our site and newsletter ad-free.</p></div>
 		<a href="https://patreon.com/oddlittleturtle" 
 			target="_blank"
 			rel="noopener noreferrer"
@@ -72,7 +88,6 @@
 				class="button is-light font-medium text-sm capitalize godo-tracking">
 				<i class="fas fa-envelope-open-text"></i> <span>Subscribe</span>
 		</a>
-		<p>Patreon signups receive complementary membership here.</p>
 		{{else}}
 		<p class="pae-des">Your support means a lot. Thanks so much!</p>
 		{{/unless}}
