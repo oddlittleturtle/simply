@@ -40,3 +40,4 @@ yarn.lock
 
 # master
 src/
+custom-kusi-tags.hbs
