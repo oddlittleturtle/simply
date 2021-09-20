@@ -1,9 +1,122 @@
 routes:
+  # Members
+  /signup/: members/signup
+  /signin/: members/signin
+  /account/: members/account
+  /membership/: members/membership
+  
+  #Individual Pages
+  ##  /about/: about
+  #/contact/bug-track/: bug-track
+  #/contact/discord/: discord
+  #/contact/requests/: requests
+  #/odds-mods/: odds-mods
+  
+  #Load Order FAQ
+  /load-order/faq/:
+    controller: channel
+    filter: 'tag:[faq]'
+    limit: all
+    template: godo-archive-faq
+    data: page.faq
+    
+  /featured/:
+    controller: channel
+    filter: 'tag:-[faq,hash-docs]'
+    limit: 10
+    template: index
+    data: page.home-featured
+  
+  /archive/:
+    controller: channel
+    filter: 'tag:-[faq,hash-docs]'
+    limit: all
+    template: index
 
 collections:
+  # Writing Binge
+  /writing-binge/:
+    permalink: /writing-binge/{year}/{slug}/
+    filter: 'tag:[november-writing-binge,onowribi,nanowrimo]'
+    
+  # Ugh.
+  /mods/ugh/:
+    permalink: /mods/ugh/{slug}/
+    filter: 'tag:[hash-ugh-series]'
+    
+  # Skyrim Mods
+  /mods/skyrim/:
+    permalink: /mods/skyrim/{slug}/
+    filter: 'tag:[skyrim-se-mods]'
+    
+  # Mod Releases
+  /mods/relz/:
+    permalink: /mods/relz/{slug}/
+    filter: 'tag:[hash-release]'
+
+  # Mod Ports
+  /mods/ports/:
+    permalink: /mods/ports/{slug}/
+    filter: 'tag:[hash-ports,xbox-ports]'
+
+  #Companion Mods
+  /mods/companions/:
+    permalink: /mods/companions/{slug}/
+    filter: 'tag:[hash-companion-mods]'    
+    
+  # Mods
+  /mods/:
+    permalink: /mods/{slug}/
+    filter: 'tag:[hash-mods,mod-release,mod-update]'
+    data: page.about
+    template: godo-template-photographer
+    limit: all
+    
+  # Mod Tutorials
+  /mod-dev/tutorials/:
+    permalink: /mod-dev/tutorials/{slug}/
+    filter: 'tag:[modding-tutorials,tutorials]'
+    limit: 5
+    template: godo-template-medium
+    
+  #Mod Development Blog
+  /mod-dev/:
+    permalink: /mod-dev/{slug}/
+    filter: 'tag:[modding-journey,creation-kit]'
+    data: page.comingsoon
+    template: godo-template-featured
+    limit: 10
+
+  #Load Order Spotlight
+  /load-order/spotlight/:
+    permalink: /load-order/spotlight/{slug}/
+    filter: 'tag:[load-order-spotlight]'
+    
+  # Load order FAQ Articles to Specific Questions
+  /load-order/faq/articles/:
+    permalink: /load-order/faq/{slug}/
+    filter: 'tag:[hash-asq,faq]'
+    data: page.lo-faq
+    template: godo-archive-faq
+    limit: all
+
+  #Load Order
+  /load-order/:
+    permalink: /load-order/{slug}/
+    filter: 'tag:[load-order-survival,load-order-framework,survival-guide,load-order]'
+    template: godo-archive-faq
+
+  # Documentation
+  /mods/docs/:
+    permalink: /mods/docs/{slug}/
+    filter: 'tag:[hash-docs]'
+    template: portfolio
+    limit: 5
+
+  # Default
   /:
     permalink: /{slug}/
-    template: index
+    filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,mod-update,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release]'
 
 taxonomies:
   tag: /tag/{slug}/
