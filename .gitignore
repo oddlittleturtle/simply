@@ -42,3 +42,4 @@ yarn.lock
 src/
 custom-kusi-tags.hbs
 *.yaml
+routes.yaml
