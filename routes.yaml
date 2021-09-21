@@ -75,7 +75,7 @@ collections:
   /mods/:
     permalink: /mods/{slug}/
     filter: 'tag:[hash-mods,mod-release,mod-update]'
-    data: page.about
+    data: page.odds-mods
     template: godo-archive-mods
     limit: all
     
