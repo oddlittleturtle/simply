@@ -15,7 +15,7 @@ routes:
   #Load Order FAQ
   /load-order/faq/:
     controller: channel
-    filter: 'tag:[faq]'
+    filter: 'tag:[faq,hash-asq]'
     limit: all
     template: godo-archive-faq
     data: page.faq
@@ -32,6 +32,10 @@ routes:
     filter: 'tag:-[faq,hash-docs]'
     limit: all
     template: index
+    
+  /:
+    template: simply-home
+    data: page.simply-home
 
 collections:
   # Writing Binge
@@ -43,11 +47,13 @@ collections:
   /mods/ugh/:
     permalink: /mods/ugh/{slug}/
     filter: 'tag:[hash-ugh-series]'
+    template: godo-archive-mods
     
   # Skyrim Mods
   /mods/skyrim/:
     permalink: /mods/skyrim/{slug}/
     filter: 'tag:[skyrim-se-mods]'
+    template: godo-archive-mods
     
   # Mod Releases
   /mods/relz/:
@@ -62,14 +68,15 @@ collections:
   #Companion Mods
   /mods/companions/:
     permalink: /mods/companions/{slug}/
-    filter: 'tag:[hash-companion-mods]'    
+    filter: 'tag:[hash-companion-mods]'
+    template: godo-archive-mods    
     
   # Mods
   /mods/:
     permalink: /mods/{slug}/
     filter: 'tag:[hash-mods,mod-release,mod-update]'
     data: page.about
-    template: godo-template-photographer
+    template: godo-archive-mods
     limit: all
     
   # Mod Tutorials
@@ -83,8 +90,8 @@ collections:
   /mod-dev/:
     permalink: /mod-dev/{slug}/
     filter: 'tag:[modding-journey,creation-kit]'
-    data: page.comingsoon
-    template: godo-template-featured
+    data: page.mod-development
+    template: godo-template-medium
     limit: 10
 
   #Load Order Spotlight
@@ -110,7 +117,7 @@ collections:
   /mods/docs/:
     permalink: /mods/docs/{slug}/
     filter: 'tag:[hash-docs]'
-    template: portfolio
+    template: godo-archive
     limit: 5
 
   # Default
