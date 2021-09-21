@@ -41,8 +41,11 @@
 
             <section class="post-body font-sans has-sidebar text-base leading-relaxed js-kusi-doc">
                 {{content}}
-
-                {{!-- Button to edit on GitHub - add link on Facebook description --}}
+				
+				{{!-- Share buttons --}}
+				{{> "components/social-share" class="order-first mb-6 md:mb-0 md:order-none" Tracking_name="Tags"}}
+                
+				{{!-- Button to edit on GitHub - add link on Facebook description --}}
                 {{!--{{#if og_description}}
                 <p class="mt-10">
                     <a class="edit-on-github godo-tracking button is-outlined is-primary"

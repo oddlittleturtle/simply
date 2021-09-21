@@ -3,17 +3,22 @@
 
 <header class="author-header">
     <div class="px-4 py-12 md:py-vw6 mx-auto max-w-3xl text-center">
-        <h1 class="text-3xl md:text-4xl text-title">{{t "Frequently Asked Questions"}}</h1>
-        <div class="mt-5 text-lg text-gray-500">{{t "There are {total} answers in total" total=pagination.total}}</div>
+        <h1 class="text-3xl md:text-4xl text-title">{{t "Odd's Mods"}}</h1>
+		<div class="mt-5 text-lg text-gray-500">{{t "Quality of life mods that make sense."}</div>
+        <div class="mt-5 text-lg text-gray-500">{{t "There are {total} mods in total" total=pagination.total}}</div>
     </div>
 </header>
 
 <div class="site-post feed-entry-content container mx-auto pb-10">
     <div class="feed-entry-wrap max-w-740 mx-auto">
-
+	
         {{#foreach posts}}
         <article class="archive-post archive-date-{{date format="M"}}">
-           {{!-- <div class="archive-label text-primary px-6 mt-4 mb-2 text-2xl font-bold capitalize">{{date format="MMMM YYYY"}}</div> --}}
+           <div class="archive-label text-primary px-6 mt-4 mb-2 text-2xl font-bold capitalize">
+				{{#get "posts" filter="tags:{{tags.[3].slug}}" limit="all" order="published_at asc"}}
+					{{tag.name}}
+				{{/get}}
+		   </div>
             <a class="archive-link px-6 block text-title hover:text-dark hover:text-primary rounded" href="{{url}}">
                 <div class="border-t border-gray-200 py-6">
                     <h2 class="archive-title text-xl md:text-2xl font-bold">{{title}}</h2>
