@@ -60,5 +60,10 @@
         "width": 2000
       }
     }
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.5",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.7"
   }
 }
