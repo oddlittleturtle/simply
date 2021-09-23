@@ -43,3 +43,4 @@ src/
 
 robots.txt
 package.json
+gulpfile.js
