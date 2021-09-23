@@ -126,5 +126,5 @@ collections:
     filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,mod-update,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release]'
 
 taxonomies:
-  tag: /tag/{slug}/
+  tag: /topic/{slug}/
   author: /author/{slug}/
