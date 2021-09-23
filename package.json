@@ -64,6 +64,7 @@
   "dependencies": {
     "autoprefixer": "^10.3.5",
     "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
     "postcss": "^8.3.7"
   }
 }
