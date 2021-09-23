@@ -6,9 +6,9 @@
 
 {{#page}}
 
-<article id="personal-cover" class="simply-hero-cover flex items-center justify-center relative min-h-screen py-24 bg-dark">
+<article class="simply-hero-cover flex items-center justify-center relative min-h-screen py-24 bg-dark">
     {{!-- Featured Media - partials/components/media-cover.hbs --}}
-    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title id=personal-cover}}
 	<canvas id="simply-hero-canvas"></canvas>
 	
     <div class="mx-auto max-w-740 px-4 p-24 z-3 text-white text-center">
@@ -20,6 +20,7 @@
     {{!-- Social Media - partilas/widget/social-media.hbs --}}
     {{> "widget/social-media" class="absolute right-0 bottom-0 mr-8 mb-8 text-white z-2 flex-col hidden md:flex"}}
 </article>
+
 
 {{/page}}
 
