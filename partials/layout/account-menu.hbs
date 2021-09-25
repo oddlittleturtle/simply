@@ -59,9 +59,9 @@
 
 {{else}}
 
-{{!-- <a class="button is-white mr-2 text-sm font-medium hidden md:flex" href="{{@site.url}}/signin/">{{t "Log in"}}</a> --}}
+{{!-- <a class="button is-white mr-2 text-sm font-medium hidden md:flex" href="{{@site.url}}/signin/"><svg class="icon icon-user-circle-o"><use xlink:href="#icon-user-circle-o"></use></svg><span class="pl-3">{{t "Log in"}}</span></a> --}}
 <a data-portal="signin" class="button is-white mr-2 text-sm font-medium hidden md:flex" href="#">{{t "Log in"}}</a>
 {{!-- <a class="button is-primary text-sm font-medium hidden md:flex" href="{{@site.url}}/membership/">{{t "Subscribe"}}</a> --}}
-<a data-portal="account/plans" class="button is-primary text-sm font-medium hidden md:flex" href="#">{{t "Subscribe"}}</a>
+<a data-portal="account/plans" class="button is-primary text-sm text-white font-medium hidden md:flex" href="#"><svg class="ico-icon icon-user-plus"><use xlink:href="#icon-user-plus"></use></svg><span class="pl-3">{{t "Subscribe"}}</span></a>
 
 {{/if}}
