@@ -25,7 +25,25 @@ routes:
     filter: 'tag:[survival-guide-changelog]'
     limit: all
     template: godo-archive-changelog
-    
+
+  # Mod Ports
+  /mods/ports/:
+    filter: 'tag:[hash-ports,xbox-ports]'
+    limit: all
+    template: godo-archive-mods
+  
+  # Mods
+  /mods/:
+    filter: 'tag:[hash-mods]'
+    template: godo-archive-mods
+    limit: all
+
+  # Mod Tutorials
+  /mod-dev/tutorials/:
+    filter: 'tag:[modding-tutorials,tutorials,creation-kit]'
+    limit: 12
+    template: godo-template-medium
+
   /featured/:
     controller: channel
     filter: 'tag:-[faq,hash-docs,hash-mods]'
@@ -44,59 +62,16 @@ routes:
     data: page.simply-home
 
 collections:
-  # Writing Binge
-  /writing-binge/:
-    permalink: /writing-binge/{year}/{slug}/
-    filter: 'tag:[november-writing-binge,onowribi,nanowrimo]'
-    
-  # Ugh.
-  /mods/ugh/:
-    permalink: /mods/ugh/{slug}/
-    filter: 'tag:[hash-ugh-series]'
-    template: godo-archive-mods
-    
-  # Skyrim Mods
-  /mods/skyrim/:
-    permalink: /mods/skyrim/{slug}/
-    filter: 'tag:[skyrim-se-mods]'
-    template: godo-archive-mods
-    
   # Mod Releases
   /mods/relz/:
     permalink: /mods/relz/{slug}/
     filter: 'tag:[hash-relz,mod-release]'
     template: godo-template-medium
-
-  # Mod Ports
-  /mods/ports/:
-    permalink: /mods/ports/{slug}/
-    filter: 'tag:[hash-ports,xbox-ports]'
-
-  #Companion Mods
-  /mods/companions/:
-    permalink: /mods/companions/{slug}/
-    filter: 'tag:[hash-companion-mods]'
-    template: godo-archive-mods    
-    
-  # Mods
-  /mods/:
-    permalink: /mods/{slug}/
-    filter: 'tag:[hash-mods]'
-    data: page.odds-mods
-    template: godo-archive-mods
-    limit: all
-    
-  # Mod Tutorials
-  /mod-dev/tutorials/:
-    permalink: /mod-dev/tutorials/{slug}/
-    filter: 'tag:[modding-tutorials,tutorials,creation-kit]'
-    limit: 12
-    template: godo-template-medium
     
   #Mod Development Blog
   /mod-dev/:
     permalink: /mod-dev/{slug}/
-    filter: 'tag:[modding-journey,hash-modding-journey,xbox,playthrough]'
+    filter: 'tag:[modding-journey,hash-modding-journey,xbox,playthrough,work-in-progress]'
     data: page.mod-development
     template: godo-template-medium
     limit: all
