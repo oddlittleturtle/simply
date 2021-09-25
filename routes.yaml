@@ -18,11 +18,17 @@ routes:
     filter: 'tag:[faq,hash-asq]'
     limit: all
     template: godo-archive-faq
-    data: page.faq
+    data: page.lo-faq
+    
+  #Load Order Changelog
+  /load-order/survival-guide/changelog/:
+    filter: 'tag:[survival-guide-changelog]'
+    limit: all
+    template: godo-archive-changelog
     
   /featured/:
     controller: channel
-    filter: 'tag:-[faq,hash-docs]'
+    filter: 'tag:-[faq,hash-docs,hash-mods]'
     limit: 10
     template: index
     data: page.home-featured
@@ -58,7 +64,8 @@ collections:
   # Mod Releases
   /mods/relz/:
     permalink: /mods/relz/{slug}/
-    filter: 'tag:[hash-release]'
+    filter: 'tag:[hash-relz,mod-release]'
+    template: godo-template-medium
 
   # Mod Ports
   /mods/ports/:
@@ -74,7 +81,7 @@ collections:
   # Mods
   /mods/:
     permalink: /mods/{slug}/
-    filter: 'tag:[hash-mods,mod-release,mod-update]'
+    filter: 'tag:[hash-mods]'
     data: page.odds-mods
     template: godo-archive-mods
     limit: all
@@ -82,17 +89,17 @@ collections:
   # Mod Tutorials
   /mod-dev/tutorials/:
     permalink: /mod-dev/tutorials/{slug}/
-    filter: 'tag:[modding-tutorials,tutorials]'
-    limit: 5
+    filter: 'tag:[modding-tutorials,tutorials,creation-kit]'
+    limit: 12
     template: godo-template-medium
     
   #Mod Development Blog
   /mod-dev/:
     permalink: /mod-dev/{slug}/
-    filter: 'tag:[modding-journey,creation-kit]'
+    filter: 'tag:[modding-journey,hash-modding-journey,xbox,playthrough]'
     data: page.mod-development
     template: godo-template-medium
-    limit: 10
+    limit: all
 
   #Load Order Spotlight
   /load-order/spotlight/:
@@ -102,7 +109,7 @@ collections:
   # Load order FAQ Articles to Specific Questions
   /load-order/faq/articles/:
     permalink: /load-order/faq/{slug}/
-    filter: 'tag:[hash-asq,faq]'
+    filter: 'tag:[hash-asq]'
     data: page.lo-faq
     template: godo-archive-faq
     limit: all
@@ -110,8 +117,8 @@ collections:
   #Load Order
   /load-order/:
     permalink: /load-order/{slug}/
-    filter: 'tag:[load-order-survival,load-order-framework,survival-guide,load-order]'
-    template: godo-archive-faq
+    filter: 'tag:[hash-load-order,load-order-survival-guide]'
+    template: godo-archive
 
   # Documentation
   /mods/docs/:
