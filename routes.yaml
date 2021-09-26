@@ -19,31 +19,8 @@ routes:
     limit: all
     template: godo-archive-faq
     data: page.lo-faq
+    order: asc
     
-  #Load Order Changelog
-  /load-order/survival-guide/changelog/:
-    filter: 'tag:[survival-guide-changelog]'
-    limit: all
-    template: godo-archive-changelog
-
-  # Mod Ports
-  /mods/ports/:
-    filter: 'tag:[hash-ports,xbox-ports,game-modifications]'
-    limit: all
-    template: godo-archive-mods
-  
-  # Mods
-  /mods/:
-    filter: 'tag:[hash-mods,game-modifications]'
-    template: godo-archive-mods
-    limit: all
-
-  # Mod Tutorials
-  /mod-dev/tutorials/:
-    filter: 'tag:[modding-tutorials,tutorials,creation-kit]'
-    limit: 12
-    template: godo-template-medium
-
   /featured/:
     controller: channel
     filter: 'tag:-[faq,hash-docs,hash-mods]'
@@ -60,20 +37,50 @@ routes:
   /:
     template: simply-home
     data: page.simply-home
+    
 
 collections:
+  #Load Order Changelog
+  /load-order/survival-guide/changelog/:
+    permalink: /load-order/changelog/{slug}/
+    filter: 'primary_tag:[survival-guide-changelog]'
+    limit: all
+    template: godo-archive-changelog
+    order: asc
+
+  # Mod Ports
+  /mods/ports/:
+    permalink: /mods/ports/{slug}/
+    filter: 'tag:[hash-ports,xbox-ports]+primary_tag:[game-modifications]'
+    limit: all
+    template: godo-archive-mods
+  
+  # Mods
+  /mods/:
+    permalink: /mods/{slug}/
+    filter: 'tag:[hash-mods]+primary_tag:[game-modifications]'
+    template: godo-archive-mods
+    limit: all
+
+  # Mod Tutorials
+  /mod-dev/tutorials/:
+    permalink: /mod-dev/tutorials/{slug}/
+    filter: 'tag:[modding-tutorials,tutorials]+primary_tag:[creation-kit]'
+    limit: 12
+    template: godo-template-medium
+    
   # Mod Releases
   /mods/relz/:
     permalink: /mods/relz/{slug}/
     filter: 'tag:[hash-relz,mod-release]'
-    template: godo-template-featured
+    template: godo-template-medium
     
   #Mod Development Blog
   /mod-dev/:
-    permalink: /mod-dev/{slug}/
-    filter: 'tag:[modding-journey,hash-modding-journey,xbox,playthrough,work-in-progress]'
+    permalink: /{year}/{month}/{slug}/
+    filter: 'tag:[modding-journey,hash-modding-journey,wasteland-imports]+primary_tag:[news,admin,playthrough,work-in-progress]'
     data: page.mod-development
-    template: godo-template-medium
+    template: godo-template-featured
     limit: all
 
   #Load Order Spotlight
@@ -92,8 +99,9 @@ collections:
   #Load Order
   /load-order/:
     permalink: /load-order/{slug}/
-    filter: 'tag:[hash-load-order,load-order-survival-guide,load-order-framework,load-order]'
-    template: godo-archive
+    filter: 'tag:[hash-load-order,load-order-survival-guide,load-order-framework]'
+    template: index
+    limit: all
 
   # Documentation
   /mods/docs/:
@@ -105,7 +113,7 @@ collections:
   # Default
   /:
     permalink: /{slug}/
-    filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,mod-update,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release]'
+    filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release]'
 
 taxonomies:
   tag: /topic/{slug}/
