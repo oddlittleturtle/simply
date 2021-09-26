@@ -11,14 +11,20 @@
     {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
 
     <div class="mx-auto max-w-740 px-4 p-24 z-3 text-white text-center">
-        <h1 class="mb-6 text-5xl md:text-6xl tracking-wider animated fadeInUp">{{title}}</h1>
-        <div class="text-3xl md:text-32"> {{content}}
-		<div class="mx-auto max-w-740 px-4 p-24 z-3 text-white text-center">
-				<h2 class="mb-6 text-5xl md:text-6xl tracking-wider">We will return soon.</h2>
+        <h1 class="mb-6 text-5xl md:text-6xl tracking-wider animated FadeInUp">{{title}}</h1>
+        <div class="text-3xl md:text-32">{{content}}</div>
+		
+    </div>
+
+    {{!-- Social Media - partilas/widget/social-media.hbs --}}
+    {{> "widget/social-media" class="absolute right-0 bottom-0 mr-8 mb-8 text-white z-2 flex-col hidden md:flex"}}
+</article>
+
+{{/page}}
 				
 				<div class="col mb-8">
 					<div class="pae-icon">
-					<svg class="icon icon-turtle"><use xlink:href="#icon-turtle"></use></svg>
+					<svg class="icon icon-turtle animated FadeInUp"><use xlink:href="#icon-turtle"></use></svg>
 					</div>
 					<h4 class="pae-title uppercase">ODD'S MODS</h4>
 					<div class="pae-des"><p>Quality of life mods that make sense.</p></div>
@@ -31,18 +37,12 @@
 					</a>
 				</div>
 				<div class="col mb-8">
-				<div class="pae-icon"><svg class="icon icon-glass"><use xlink:href="#icon-glass"></use>
-				</svg></div>
-				<h4 class="pae-title uppercase">JOIN THE DISCUSSION</h4>
-				<div class="pae-des"><p>Ask questions, get help, learn load orders, report bugs, make suggestions, share screenshots and playthrough stories.</p>
-				</div>
-				<p>
-				<a href="{{@site.url}}/discord/" 
-					target="_blank"
-					rel="noopener noreferrer"
-					data-event-label="Discord"
-					class="button is-light font-medium text-sm capitalize godo-tracking">
-					<svg class="icon icon-discord"><use xlink:href="#icon-discord"> <span class="pl-4">Join Us!</span></a> 
+					<div class="pae-icon"><svg class="icon icon-book"><use xlink:href="#icon-book"></use>
+					</svg></div>
+					<h4 class="pae-title uppercase">FO4 Load Orders</h4>
+					<div class="pae-des"><p>Ask questions, get help, learn load orders, report bugs, make suggestions, share screenshots and playthrough stories.</p>
+					</div>
+					<p>
 					{{#if @site.twitter}}
 						<a href="{{twitter_url}}" 
 							target="_blank"
@@ -53,25 +53,17 @@
 							<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"> <span class="pl-4">Follow us!</span>
 						</a>
 					{{/if}}
+					
+					<a class="button is-light font-medium text-sm capitalize godo-tracking" href="https://oddsmods.xyz/FO4LOFrameworkTemplate"><svg class="icon mr-2"><use xlink:href="#icon-book"></use></svg> <span class="pl-4">Load Order Framework Template</span></a>
+					<a class="button is-light font-medium text-sm capitalize godo-tracking" href="https://oddsmods.xyz/FO4LOSurvivalGuide"><svg class="icon mr-2"><use xlink:href="#icon-book"></use></svg> <span class="pl-4">Load Order Framework Template</span></a>
 					</p>
 				</div>
 				
 				
 				
-				<a class="button is-white is-outlined dark is-medium" href="https://to.oddsmods.xyz/FO4LOFrameworkTemplate"><svg class="icon mr-2"><use xlink:href="#icon-book"></use></svg> <span>Load Order Framework Template</span></a> 
 				
-			</div>
-		</div>
-		
-		
-    </div>
-
-    {{!-- Social Media - partilas/widget/social-media.hbs --}}
-    {{> "widget/social-media" class="absolute right-0 bottom-0 mr-8 mb-8 text-white z-2 flex-col hidden md:flex"}}
-</article>
-
-{{/page}}
-
+				
+			
 			
 
 
