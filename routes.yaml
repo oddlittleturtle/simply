@@ -38,6 +38,10 @@ routes:
     template: simply-home
     data: page.simply-home
     
+  /private/:
+    template: private
+    data: page.private
+    
 
 collections:
   #Load Order Changelog
