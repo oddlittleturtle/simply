@@ -28,13 +28,13 @@ routes:
 
   # Mod Ports
   /mods/ports/:
-    filter: 'tag:[hash-ports,xbox-ports]'
+    filter: 'tag:[hash-ports,xbox-ports,game-modifications]'
     limit: all
     template: godo-archive-mods
   
   # Mods
   /mods/:
-    filter: 'tag:[hash-mods]'
+    filter: 'tag:[hash-mods,game-modifications]'
     template: godo-archive-mods
     limit: all
 
@@ -66,7 +66,7 @@ collections:
   /mods/relz/:
     permalink: /mods/relz/{slug}/
     filter: 'tag:[hash-relz,mod-release]'
-    template: godo-template-medium
+    template: godo-template-featured
     
   #Mod Development Blog
   /mod-dev/:
@@ -92,7 +92,7 @@ collections:
   #Load Order
   /load-order/:
     permalink: /load-order/{slug}/
-    filter: 'tag:[hash-load-order,load-order-survival-guide]'
+    filter: 'tag:[hash-load-order,load-order-survival-guide,load-order-framework,load-order]'
     template: godo-archive
 
   # Documentation
