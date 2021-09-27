@@ -11,7 +11,7 @@
     </div>
 </section>
 
-{{#get "posts" limit="6" filter="tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]" as |recents| }}
+{{#get "posts" limit="6" filter="tag:-[hash-portfolio,hash-legal,hash-podcast]" as |recents| }}
     <div class="container mx-auto">
         <div class="max-w-1100 mx-auto pb-8">
             <div class="row">
@@ -24,3 +24,8 @@
         </div>
     </div>
 {{/get}}
+
+<hr class="my-10">
+				
+			{{!-- User Engagement - partials/components/user-engagement.hbs --}}
+			{{> "components/user-engagement"}}

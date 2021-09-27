@@ -23,14 +23,14 @@ routes:
     
   /featured/:
     controller: channel
-    filter: 'tag:-[faq,hash-docs,hash-mods]'
+    filter: 'tag:-[faq,hash-docs,hash-mods,hash-legal]'
     limit: 10
     template: index
     data: page.home-featured
   
   /archive/:
     controller: channel
-    filter: 'tag:-[faq,hash-docs]'
+    filter: 'tag:-[faq,hash-docs,hash-legal,hash-terms,legal]'
     limit: all
     template: index
     
@@ -48,8 +48,8 @@ collections:
     template: godo-archive-changelog
     order: asc
 
-    /olt-tos/:
-    permalink: /olt-tos/{slug}/
+    /legal/:
+    permalink: /legal/{slug}/
     filter: 'tag:[hash-terms,discord,legal,contact]'
     template: godo-archive-terms
 
@@ -118,7 +118,7 @@ collections:
   # Default
   /:
     permalink: /{slug}/
-    filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release]'
+    filter: 'tag:-[hash-docs,load-order,load-order-framework,load-order-spotlight,load-order-survival,modding-journey,modding-tutorials,hash-mods,mod-release,hash-companion-mods,skyrim-se-mods,hash-ugh-series,november-writing-binge,nanowrimo,onowribi,faq,hash-asq,hash-ports,wasteland-imports,hash-wip,hash-release,hash-terms]'
 
 taxonomies:
   tag: /topic/{slug}/
