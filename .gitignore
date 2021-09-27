@@ -41,7 +41,7 @@ yarn.lock
 # master
 src/
 
-robots.txt
-package.json
+robot.txt
 gulpfile.js
+package.json
 .eslintrc.json

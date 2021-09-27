@@ -5,14 +5,7 @@ routes:
   /account/: members/account
   /membership/: members/membership
   
-  #Individual Pages
-  ##  /about/: about
-  #/contact/bug-track/: bug-track
-  #/contact/discord/: discord
-  #/contact/requests/: requests
-  #/odds-mods/: odds-mods
-  
-  #Load Order FAQ
+ #Load Order FAQ
   /load-order/faq/:
     controller: channel
     filter: 'tag:[faq,hash-asq]'
@@ -20,7 +13,7 @@ routes:
     template: godo-archive-faq
     data: page.lo-faq
     order: asc
-    
+  
   /featured/:
     controller: channel
     filter: 'tag:-[faq,hash-docs,hash-mods,hash-legal]'
@@ -48,7 +41,7 @@ collections:
     template: godo-archive-changelog
     order: asc
 
-    /legal/:
+  /legal/:
     permalink: /legal/{slug}/
     filter: 'tag:[hash-terms,discord,legal,contact]'
     template: godo-archive-terms
