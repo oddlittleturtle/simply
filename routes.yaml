@@ -37,7 +37,7 @@ routes:
   /:
     template: simply-home
     data: page.simply-home
-    
+        
 
 collections:
   #Load Order Changelog
@@ -47,6 +47,11 @@ collections:
     limit: all
     template: godo-archive-changelog
     order: asc
+
+    /olt-tos/:
+    permalink: /olt-tos/{slug}/
+    filter: 'tag:[hash-terms,discord,legal,contact]'
+    template: godo-archive-terms
 
   # Mod Ports
   /mods/ports/:
