@@ -6,7 +6,7 @@
 		</div>
 		<h4 class="pae-title uppercase">ODD'S MODS</h4>
 		<div class="pae-des"><p>Quality of life mods that make sense.</p></div>
-			<a class="button is-white font-medium text-sm capitalize godo-tracking" 
+			<a class="button is-medium font-medium text-sm capitalize godo-tracking" 
 				href="{{@site.url}}/mods/" 
 				data-event-label="oddsmods"
 				target="_blank"
@@ -26,7 +26,7 @@
 		target="_blank"
         rel="noopener noreferrer"
 		data-event-label="Discord"
-		class="button is-white font-medium text-sm capitalize godo-tracking">
+		class="button is-medium font-medium text-sm capitalize godo-tracking">
 		<svg class="icon icon-discord"><use xlink:href="#icon-discord"> <span class="pl-4">Join Us!</span></a> 
 		{{#if @site.twitter}}
 			<a href="{{twitter_url}}" 
@@ -34,7 +34,7 @@
 				rel="noopener noreferrer"
 				data-event-action="Social"
 				data-event-label="Twitter"
-				class="button font-medium text-sm capitalize godo-tracking">
+				class="button is-medium font-medium text-sm capitalize godo-tracking">
 				<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"> <span class="pl-4">Follow us!</span>
 			</a>
 		{{/if}}
@@ -47,7 +47,6 @@
 	<div class="col mb-8">
 		<div class="pae-icon"><svg class="icon icon-gift"><use xlink:href="#icon-gift"></use></svg></div>
 		<h4 class="pae-title uppercase">SUPPORT US</h4>
-		{{#unless @member.paid}}
 		<div class="pae-des">
 		<p>Donations welcome.</p>
 		<p>Help us keep our site and newsletter ad-free.</p></div>
@@ -55,12 +54,9 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				data-event-label="Tip Jar"
-				class="button is-white font-medium text-sm capitalize godo-tracking">
+				class="button is-medium font-medium text-sm capitalize godo-tracking">
 				<svg class="icon icon-heart"><use xlink:href="#icon-heart"> <span class="pl-4">Donate</span>
 		</a>
-		{{else}}
-		<p class="pae-des">Your support means a lot. Thanks so much!</p>
-		{{/unless}}
 
 	</div>
 
@@ -73,7 +69,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			data-event-label="Swag"
-			class="button is-white font-medium text-sm capitalize godo-tracking">
+			class="button is-medium font-medium text-sm capitalize godo-tracking">
 			<svg class="icon icon-coffee"><use xlink:href="#icon-coffee"> <span class="pl-4">Ugh. Swag.</span>
 			</a>
 	</div>
